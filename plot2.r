@@ -16,7 +16,7 @@ plot2 <- function (filename, fromdate,todate){
     #print plot as png file
     png(
         filename = "plot2.png",height=480,width=480,
-        units = "px", bg=NA)
+        units = "px", bg = "transparent")
     #Plotting - strptime date & time as Datetime value
     plot(x=strptime(paste(df_hpc$Date, df_hpc$Time), 
                     "%d/%m/%Y %H:%M:%S"),

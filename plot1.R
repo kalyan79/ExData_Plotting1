@@ -17,7 +17,7 @@ plot1 <- function (filename, fromdate,todate){
     #print Histogram as png file
     png(
         filename = "plot1.png",height=480,width=480,
-        units = "px", bg=NA)
+        units = "px", bg = "transparent")
     #histogram
     hist(df_hpc$Global_active_power, 
          col="red",

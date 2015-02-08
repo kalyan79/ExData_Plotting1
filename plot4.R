@@ -15,12 +15,12 @@ plot4 <- function (filename, fromdate,todate){
     #print plot as png file
     png(
         filename = "plot4.png",height=480,width=480,
-        units = "px", bg=NA)
+        units = "px", bg = "transparent")
     #plot - par(mfrow) to get 2x2 plots. Then plot one by one to get multiple plots
     par(mfrow=c(2,2))	
     plot(x=strptime(paste(df_hpc$Date, df_hpc$Time), 
                     "%d/%m/%Y %H:%M:%S"), y=df_hpc$Global_active_power, 
-         type="l" , ylab= "Global Active Power(kilowatts)",
+         type="l" , ylab= "Global Active Power",
          xlab="")		
     plot(x=strptime(paste(df_hpc$Date, df_hpc$Time),
                     "%d/%m/%Y %H:%M:%S"), y=df_hpc$Voltage, 

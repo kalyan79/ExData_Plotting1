@@ -15,7 +15,7 @@ plot3 <- function (filename, fromdate,todate){
     #print plot as png file
     png(
         filename = "plot3.png",height=480,width=480,
-        units = "px", bg=NA)
+        units = "px", bg = "transparent")
     #plot empty axis with type="n"  and then add lines for 3 sub metering values
     plot(x=strptime(paste(df_hpc$Date, df_hpc$Time), 
                     "%d/%m/%Y %H:%M:%S"), y=df_hpc$Sub_metering_1, 
